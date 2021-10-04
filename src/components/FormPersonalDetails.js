@@ -31,7 +31,8 @@ const FormPersonalDetails = (props) => {
             <TextField
               placeholder="Enter Your Occupation"
               label="Occupation"
-              onChange={handleChange('occupation')}
+              name = "occupation"
+              onChange={handleChange}
               defaultValue={values.occupation}
               margin="normal"
               fullWidth
@@ -40,7 +41,8 @@ const FormPersonalDetails = (props) => {
             <TextField
               placeholder="Enter Your City"
               label="City"
-              onChange={handleChange('city')}
+              name="city"
+              onChange={handleChange}
               defaultValue={values.city}
               margin="normal"
               fullWidth
@@ -49,7 +51,8 @@ const FormPersonalDetails = (props) => {
             <TextField
               placeholder="Enter Your Bio"
               label="Bio"
-              onChange={handleChange('bio')}
+              name="bio"
+              onChange={handleChange}
               defaultValue={values.bio}
               margin="normal"
               fullWidth

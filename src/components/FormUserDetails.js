@@ -27,7 +27,8 @@ const FormUserDetails = (props) => {
                     <TextField
                     placeholder="Enter Your First Name"
                     label="First Name"
-                    onChange={handleChange('firstName')}
+                    name = "firstName"
+                    onChange={handleChange}
                     defaultValue={values.firstName}
                     margin="normal"
                     fullWidth
@@ -36,7 +37,8 @@ const FormUserDetails = (props) => {
                     <TextField
                     placeholder="Enter Your Last Name"
                     label="Last Name"
-                    onChange={handleChange('lastName')}
+                    name = "lastName"
+                    onChange={handleChange}
                     defaultValue={values.lastName}
                     margin="normal"
                     fullWidth
@@ -45,7 +47,8 @@ const FormUserDetails = (props) => {
                     <TextField
                     placeholder="Enter Your Email"
                     label="Email"
-                    onChange={handleChange('email')}
+                    name="email"
+                    onChange={handleChange}
                     defaultValue={values.email}
                     margin="normal"
                     fullWidth

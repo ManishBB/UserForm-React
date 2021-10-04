@@ -15,16 +15,27 @@ function UserForm() {
 
   const [details, setDetails] = useState({firstName : "", lastName : "", email : "", occupation : "", city : "", bio : ""})
 
+  const pageChange = () =>{
+    setFirstName(details.firstName);
+    setLastName(details.lastName);
+    setEmail(details.email);
+    setOccupation(details.occupation);
+    setCity(details.city);
+    setBio(details.bio);
+  }
+
   const values = { firstName, lastName, email, occupation, city, bio };
   const nextStep = () => {
     setStep(step + 1);
+    pageChange();
   };
 
   const prevStep = () => {
     setStep(step - 1);
+    pageChange();
   };
 
-  const handleChange = (input) => (e) => {
+  const handleChange = (e) => {
     setDetails({...details , [e.target.name] : e.target.value})
   };
 
