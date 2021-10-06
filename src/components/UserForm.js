@@ -3,29 +3,37 @@ import FormUserDetails from "./FormUserDetails";
 import FormPersonalDetails from "./FormPersonalDetails";
 import Confirm from "./Confirm";
 import Success from "./Success";
+import database from "../util/firebase";
 
 
 function UserForm() {
   const [step, setStep] = useState(1);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [gender, setGender] = useState(null);
+  const [dateOfBirth, setDateOfBirth] = useState("")
   const [email, setEmail] = useState("");
   const [occupation, setOccupation] = useState("");
   const [city, setCity] = useState("");
   const [bio, setBio] = useState("");
+  const [education, setEducation] = useState(new Map());
 
-  const [details, setDetails] = useState({firstName : "", lastName : "", email : "", occupation : "", city : "", bio : ""})
+  const [details, setDetails] = useState({firstName : "", lastName : "", gender : null, dateOfBirth : "", email : "", occupation : "", education: "", city : "", bio : ""})
 
   const pageChange = () =>{
     setFirstName(details.firstName);
     setLastName(details.lastName);
+    setGender(details.gender);
+    setDateOfBirth(details.dateOfBirth);
     setEmail(details.email);
     setOccupation(details.occupation);
+    setEducation(details.education);
     setCity(details.city);
     setBio(details.bio);
   }
 
-  const values = { firstName, lastName, email, occupation, city, bio };
+  const values = { firstName, lastName, gender, dateOfBirth, email, occupation, education, city, bio };
+
   const nextStep = () => {
     setStep(step + 1);
     pageChange();

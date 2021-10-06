@@ -18,7 +18,7 @@ const Confirm = (props) => {
       };
         
       const {
-        values: { firstName, lastName, email, occupation, city, bio }
+        values: { firstName, lastName, gender, dateOfBirth, email, occupation, education, city, bio }
       } = props;
 
     return (
@@ -38,10 +38,19 @@ const Confirm = (props) => {
                 <ListItemText primary="Last Name" secondary={lastName} />
               </ListItem>
               <ListItem>
+                <ListItemText primary="Gender" secondary={gender} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Date of Birth" secondary={dateOfBirth} />
+              </ListItem>
+              <ListItem>
                 <ListItemText primary="Email" secondary={email} />
               </ListItem>
               <ListItem>
                 <ListItemText primary="Occupation" secondary={occupation} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Education" secondary={education} />
               </ListItem>
               <ListItem>
                 <ListItemText primary="City" secondary={city} />
